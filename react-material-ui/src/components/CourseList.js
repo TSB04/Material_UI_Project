@@ -30,7 +30,7 @@ class CoursesList extends Component {
             query: this.state.searchString
         })
         .then((response) => {
-            this.setState({courses: response.items})
+            this.setState([{courses: response.items}])
             console.log(this.state.courses)
         })
         .catch((error) => {
