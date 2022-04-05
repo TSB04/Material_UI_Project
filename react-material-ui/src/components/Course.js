@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 const Course = (props) => {
-    console.log(props)
+    console.log('test')
     return(
         <div>
             { props.course ? (
@@ -16,15 +16,15 @@ const Course = (props) => {
                     title={props.course.fields.title}
                     />
                     <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
-                        {props.course.fields.title}
-                    </Typography>
-                    <Typography component="p">
-                        {props.course.fields.description}
-                    </Typography>
+                        <Typography gutterBottom variant="headline" component="h2">
+                            {props.course.fields.title}
+                        </Typography>
+                        <Typography component="p">
+                            {props.course.fields.description}
+                        </Typography>
                     </CardContent>
                     <CardActions>
-                    <Button size="small" color="primary" href={props.course.fields.url} target="_blank">
+                    <Button size="small" color="" href={props.course.fields.url} target="_blank">
                         Go To Course
                     </Button>
                     </CardActions>

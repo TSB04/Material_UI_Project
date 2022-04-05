@@ -3,21 +3,27 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import * as contentful from 'contentful'
 import Course from '../components/Course'
+
 const SPACE_ID = '3pv1a02tk42f'
-const ACCESS_TOKEN = 'n6LGHHJxXJQDBDd0emlq4Ig8iFSdsjHKRmpxdGOwAiI'
+const ACCESS_TOKEN = 'WssFIcsphFs38oiJNBBoOn-VdF0e6ol5qZuVt4QwbUc'
+
 const client = contentful.createClient({
     space: SPACE_ID,
     accessToken: ACCESS_TOKEN
 })
+
 class CoursesList extends Component {
     state = {
         courses: [],
         searchString: ''
     }
+    
     constructor() {
-        super()
-        this.getCourses()
-    }
+         super()
+         this.getCourses()
+     }
+
+
     getCourses = () => {
         client.getEntries({
             content_type: 'course',
@@ -65,4 +71,6 @@ class CoursesList extends Component {
         )
     }
 }
+
+
 export default CoursesList;
