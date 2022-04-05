@@ -19,8 +19,8 @@ class CoursesList extends Component {
     }
     
     constructor() {
-         super()
-         this.getCourses()
+        super()
+        this.getCourses()
      }
 
 
